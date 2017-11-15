@@ -24,6 +24,15 @@ function clickButton() {
   assess(playerChoice[0], compChoice)
 }
 
+// function resetButton() {
+//   var id = this.id
+//   document.getElementById("choice").innerHTML = "You chose " + id
+//   if (this.id === "reset") {
+//     playerWins.splice(0,playerWins.length);
+//     playerWins.splice(0,playerWins.length);
+//   }
+// }
+
 function assess(playerChoice,compChoice) {
   if (playerChoice  === compChoice) {
      document.getElementById("result").innerHTML = "Computer chose the same. It's a tie!"
@@ -66,8 +75,17 @@ function assess(playerChoice,compChoice) {
  }
 }
 
+function resetButton() {
+  var id = this.id
+  document.getElementById("choice").innerHTML = "You chose " + id
+  if (this.id === "reset") {
+    return playerWins = [];
+    return compWins = [];
+  }
+}
+
 for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', clickButton, false);
+  buttons[i].addEventListener('click', clickButton, resetButton, false);
 }
 
 function playerScore(playerWins) {
