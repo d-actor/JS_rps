@@ -17,36 +17,34 @@ function compAssign() {
 
 function clickButton() {
   var id = this.id
-    console.log(playerChoice)
-    console.log(compChoice)
-  alert('You clicked ' + id)
+  alert('You chose ' + id)
   playerChoice.unshift(this.id)
-  console.log(playerChoice)
   compAssign(compChoice.unshift)
-  console.log(compChoice)
   assess(playerChoice[0], compChoice)
 }
 
 function assess(playerChoice,compChoice) {
-    if(playerChoice == 'Rock' && compChoice == "Scissors") {
-    alert('You win!')
-  } else if(playerChoice == 'Paper' && compChoice == "Scissors") {
-    alert('You lose!')
-  } else if(playerChoice == 'Scissors' && compChoice == "Scissors") {
-    alert('Tie!')
-  } else if(playerChoice == 'Rock' && compChoice == "Paper") {
-    alert('You lose!')
-  } else if(playerChoice == 'Paper' && compChoice == "Paper") {
-    alert('Tie!')
-  } else if(playerChoice == 'Scissors' && compChoice == "Paper") {
-    alert('You Win!')
-  } else if(playerChoice == 'Rock' && compChoice == "Rock") {
-    alert('Tie!')
-  } else if(playerChoice == 'Paper' && compChoice == "Rock") {
-    alert('You Win!')
-  } else if(playerChoice == 'Scissors' && compChoice == "Rock") {
-  alert('You lose!')
-  }
+  if (playerChoice  === compChoice) {
+     alert("It's a tie!");
+ } else if(playerChoice === "Rock") {
+     if (compChoice === "Scissors") {
+         alert("Computer chose Scissors. You win!");
+     } else {
+         alert("Computer chose Paper. You lose!");
+     }
+ } else if(playerChoice === "Paper") {
+     if(compChoice === "Rock") {
+         alert("Computer chose Rock. You win!");
+     } else {
+         alert("Computer chose Scissors. You lose!");
+     }
+ } else if(playerChoice === "Scissors") {
+     if (compChoice === "Rock") {
+         alert("Computer chose Rock. You lose!");
+     } else {
+         alert("Computer chose Paper. You win!");
+     }
+ }
 }
 
 for (var i = 0; i < buttons.length; i++) {
