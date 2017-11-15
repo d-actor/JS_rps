@@ -73,6 +73,12 @@ body {
 	font: 300 16px/22px "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+p {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 
 /*
 images

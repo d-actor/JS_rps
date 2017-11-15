@@ -1,4 +1,3 @@
-var choices = ['Rock', 'Paper', 'Scissors'];
 var playerChoice = []
 var compChoice = []
 
@@ -17,7 +16,7 @@ function compAssign() {
 
 function clickButton() {
   var id = this.id
-  alert('You chose ' + id)
+  document.getElementById("choice").innerHTML = "You chose " + id
   playerChoice.unshift(this.id)
   compAssign(compChoice.unshift)
   assess(playerChoice[0], compChoice)
@@ -25,24 +24,24 @@ function clickButton() {
 
 function assess(playerChoice,compChoice) {
   if (playerChoice  === compChoice) {
-     alert("It's a tie!");
+     document.getElementById("result").innerHTML = "Computer chose the same. It's a tie!"
  } else if(playerChoice === "Rock") {
      if (compChoice === "Scissors") {
-         alert("Computer chose Scissors. You win!");
+         document.getElementById("result").innerHTML = "Computer chose Scissors. You win!";
      } else {
-         alert("Computer chose Paper. You lose!");
+         document.getElementById("result").innerHTML = "Computer chose Paper. You lose!";
      }
  } else if(playerChoice === "Paper") {
      if(compChoice === "Rock") {
-         alert("Computer chose Rock. You win!");
+         document.getElementById("result").innerHTML = "Computer chose Rock. You win!";
      } else {
-         alert("Computer chose Scissors. You lose!");
+         document.getElementById("result").innerHTML = "Computer chose Scissors. You lose!";
      }
  } else if(playerChoice === "Scissors") {
      if (compChoice === "Rock") {
-         alert("Computer chose Rock. You lose!");
+         document.getElementById("result").innerHTML = "Computer chose Rock. You lose!";
      } else {
-         alert("Computer chose Paper. You win!");
+         document.getElementById("result").innerHTML = "Computer chose Paper. You win!";
      }
  }
 }
