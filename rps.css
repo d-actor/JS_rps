@@ -104,10 +104,11 @@ buttons
 button {
   background: #000;
   color: #fff;
-	border-radius: 8%;
 	display: block;
 	margin: 0;
 	text-align: center;
+  border: 0px solid #000;
+  border-radius: 2%;
 }
 
 button:hover {
