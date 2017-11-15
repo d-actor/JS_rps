@@ -60,10 +60,17 @@ Grid
 main styles
 */
 
-h1 {
+h1, h2 {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+h1 {
   font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 body {
@@ -85,6 +92,25 @@ images
 */
 
 .choice_image {
-  height: 150px;
-  border-radius: 50%;
+  height: 300px;
+  border-radius: 2%;
+  margin-top: 12px;
+}
+
+/*
+buttons
+*/
+
+button {
+  background: #000;
+  color: #fff;
+	border-radius: 8%;
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+button:hover {
+	background: #fff;
+  color: #000;
 }
