@@ -25,14 +25,7 @@ function clickButton() {
   compAssign(compChoice.unshift)
   console.log(compChoice)
   assess(playerChoice[0], compChoice)
-  // funcOrder()
 }
-
-// function funcOrder(playerChoice,compChoice) {
-//   clickButton();
-//   assess();
-// }
-// takes all functions in order they need to be called, then call on click
 
 function assess(playerChoice,compChoice) {
     if(playerChoice == 'Rock' && compChoice == "Scissors") {
@@ -55,32 +48,6 @@ function assess(playerChoice,compChoice) {
   alert('You lose!')
   }
 }
-
-// var results = assess(playerChoice,compChoice)
-
-
-// function assess(playerChoice, compChoice) {
-//     if(playerChoice[0] = 'Rock' && compChoice = "Scissors") {
-//     alert('You win!')
-//   } else if(playerChoice[0] = 'Paper' && compChoice = "Scissors") {
-//     alert('You lose!')
-//   } else if(playerChoice[0] = 'Scissors' && compChoice = "Scissors") {
-//     alert('Tie!')
-//   } else if(playerChoice[0] = 'Rock' && compChoice = "Paper") {
-//     alert('You lose!')
-//   } else if(playerChoice[0] = 'Paper' && compChoice = "Paper") {
-//     alert('Tie!')
-//   } else if(playerChoice[0] = 'Scissors' && compChoice = "Paper") {
-//     alert('You Win!')
-//   } else if(playerChoice[0] = 'Rock' && compChoice = "Rock") {
-//     alert('Tie!')
-//   } else if(playerChoice[0] = 'Paper' && compChoice = "Rock") {
-//     alert('You Win!')
-//   } else if(playerChoice[0] = 'Scissors' && compChoice = "Rock") {
-//   alert('You lose!')
-//   }
-// }
-
 
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', clickButton, false);
