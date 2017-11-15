@@ -1,5 +1,7 @@
 var playerChoice = []
 var compChoice = []
+var compWins = []
+var playerWins = []
 
 var buttons = document.getElementsByClassName("choice");
 
@@ -28,24 +30,50 @@ function assess(playerChoice,compChoice) {
  } else if(playerChoice === "Rock") {
      if (compChoice === "Scissors") {
          document.getElementById("result").innerHTML = "Computer chose Scissors. You win!";
+         playerWins.push(1)
+         playerScore(playerWins)
+         // console.log(playerWins)
      } else {
          document.getElementById("result").innerHTML = "Computer chose Paper. You lose!";
+         compWins.push(1)
+         compScore(compWins)
+         // console.log(compWins)
      }
  } else if(playerChoice === "Paper") {
      if(compChoice === "Rock") {
          document.getElementById("result").innerHTML = "Computer chose Rock. You win!";
+         playerWins.push(1)
+         playerScore(playerWins)
+         // console.log(playerWins)
      } else {
          document.getElementById("result").innerHTML = "Computer chose Scissors. You lose!";
+         compWins.push(1)
+         compScore(compWins)
+         // console.log(compWins)
      }
  } else if(playerChoice === "Scissors") {
      if (compChoice === "Rock") {
          document.getElementById("result").innerHTML = "Computer chose Rock. You lose!";
+         compWins.push(1)
+         compScore(compWins)
+         // console.log(compWins)
      } else {
          document.getElementById("result").innerHTML = "Computer chose Paper. You win!";
+         playerWins.push(1)
+         playerScore(playerWins)
+         // console.log(playerWins)
      }
  }
 }
 
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', clickButton, false);
+}
+
+function playerScore(playerWins) {
+  document.getElementById("playerscore").innerHTML = playerWins.length
+}
+
+function compScore(compWins) {
+  document.getElementById("compscore").innerHTML = compWins.length
 }

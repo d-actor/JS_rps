@@ -56,11 +56,16 @@ Grid
   padding-right: 15px;
 }
 
+.col-1-2 {
+  width: 48%;
+  display: inline-block;
+}
+
 /*
 main styles
 */
 
-h1, h2 {
+h1, h2, h3, h4 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -71,6 +76,18 @@ h1 {
 
 h2 {
   font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+  text-align:center;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  font-style: oblique;
 }
 
 body {
